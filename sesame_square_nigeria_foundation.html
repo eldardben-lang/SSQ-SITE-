@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sesame Square Nigeria Foundation — Helping Children Grow Smarter, Stronger and Kinder</title>
+  <meta name="description" content="Sesame Square Nigeria Foundation is the official West African arm of Sesame Workshop, New York. Bringing world-class early childhood education to children across Nigeria and West Africa since 2008." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/tabler-icons.min.css" />
+  <style>
+    *{margin:0;padding:0;box-sizing:border-box;}
+    :root{
+      --g:#1a7a2e;--gd:#0f4d1c;--gl:#e6f5ea;--gm:#2a9e45;
+      --y:#f5c518;--yd:#b8920e;--yp:#fffbe8;
+      --b:#1565c0;--r:#d94028;
+      --txt:#111;--muted:#4a5a4d;--border:#d0e8d4;
+      --white:#fff;--off:#f8faf8;
+      --font: 'Inter', system-ui, sans-serif;
+    }
+    body{font-family:var(--font);background:#fff;color:var(--txt);}
+    a{text-decoration:none;}
+    .sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0);}
+
+    /* ── NAV ── */
+    .nav{background:#fff;border-bottom:1.5px solid var(--border);position:sticky;top:0;z-index:200;}
+    .nav-top{display:flex;align-items:center;justify-content:space-between;padding:0 2.5rem;height:64px;}
+    .nav-brand{display:flex;align-items:center;gap:12px;}
+    .nav-badge{width:40px;height:40px;border-radius:9px;background:var(--gd);display:flex;align-items:center;justify-content:center;font-size:14px;font-weight:600;color:#fff;flex-shrink:0;letter-spacing:.02em;}
+    .nav-brand-name{font-size:15px;font-weight:600;color:var(--gd);line-height:1.2;}
+    .nav-brand-sub{font-size:10px;color:var(--muted);letter-spacing:.03em;margin-top:1px;}
+    .nav-right{display:flex;align-items:center;gap:10px;}
+    .nav-sw{display:inline-flex;align-items:center;gap:5px;border:1px solid var(--border);border-radius:7px;padding:0 14px;height:35px;font-size:12px;color:var(--muted);font-family:var(--font);}
+    .nav-sw:hover{background:var(--gl);color:var(--gd);}
+    .nav-cta{display:inline-flex;align-items:center;background:var(--y);color:var(--gd);border:none;border-radius:7px;padding:0 20px;height:35px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font);}
+    .nav-cta:hover{background:#e0b010;}
+    .nav-links-bar{background:var(--gl);border-top:0.5px solid var(--border);display:flex;padding:0 2.5rem;}
+    .nav-links-bar a{font-size:12px;color:var(--muted);padding:9px 15px;display:block;border-bottom:2px solid transparent;font-family:var(--font);}
+    .nav-links-bar a:hover{color:var(--gd);border-bottom-color:var(--g);}
+
+    /* ── HERO ── */
+    .hero{background:var(--gd);overflow:hidden;}
+    .hero-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:55% 45%;align-items:stretch;min-height:420px;}
+    .hero-text{padding:4rem 3rem 4rem 2.5rem;display:flex;flex-direction:column;justify-content:center;}
+    .hero-pill{display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.1);color:#b0ecc0;border:0.5px solid rgba(255,255,255,.18);border-radius:999px;font-size:11px;padding:5px 14px;margin-bottom:1.25rem;width:fit-content;letter-spacing:.04em;}
+    .hero h1{font-size:38px;font-weight:600;color:#fff;line-height:1.18;margin-bottom:1rem;}
+    .hero h1 em{color:var(--y);font-style:normal;}
+    .hero-sub{font-size:15px;color:#90c8a0;line-height:1.8;margin-bottom:2rem;max-width:440px;}
+    .hero-btns{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:1.5rem;}
+    .btn-y{background:var(--y);color:var(--gd);border:none;border-radius:8px;padding:12px 26px;font-size:14px;font-weight:600;cursor:pointer;font-family:var(--font);display:inline-block;}
+    .btn-y:hover{background:#e0b010;}
+    .btn-ghost{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.3);border-radius:8px;padding:11px 22px;font-size:14px;font-family:var(--font);display:inline-block;}
+    .btn-ghost:hover{background:rgba(255,255,255,.08);}
+    .hero-sw-note{display:flex;align-items:flex-start;gap:9px;background:rgba(255,255,255,.08);border:0.5px solid rgba(255,255,255,.15);border-radius:9px;padding:12px 14px;}
+    .hero-sw-note i{font-size:16px;color:var(--y);flex-shrink:0;margin-top:2px;}
+    .hero-sw-note span{font-size:12px;color:#90c8a0;line-height:1.55;}
+    .hero-sw-note a{color:var(--y);font-weight:500;}
+    .hero-sw-note a:hover{text-decoration:underline;}
+    .hero-img-col{overflow:hidden;display:flex;align-items:stretch;}
+    .hero-img-col img{width:100%;height:100%;object-fit:cover;display:block;min-height:380px;}
+
+    /* ── IMPACT BAR ── */
+    .impact-bar{background:var(--y);padding:1.5rem 2.5rem;}
+    .impact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);}
+    .impact-item{text-align:center;padding:.3rem;}
+    .impact-num{font-size:28px;font-weight:600;color:var(--gd);}
+    .impact-lbl{font-size:11px;color:var(--yd);margin-top:3px;line-height:1.4;}
+
+    /* ── MISSION ── */
+    .mission{background:var(--gl);padding:2.5rem 2.5rem;border-bottom:1px solid var(--border);}
+    .mission p{max-width:860px;margin:0 auto;text-align:center;font-size:18px;color:var(--gd);line-height:1.75;}
+    .mission a{color:var(--g);font-weight:500;}
+    .mission a:hover{text-decoration:underline;}
+
+    /* ── SECTIONS ── */
+    .section{padding:4rem 2.5rem;max-width:1200px;margin:0 auto;}
+    .divider{border:none;border-top:1px solid var(--border);}
+    .stag{display:inline-block;background:var(--gl);color:var(--g);border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.09em;padding:4px 14px;margin-bottom:.7rem;text-transform:uppercase;border:0.5px solid var(--border);}
+    .sh{font-size:28px;font-weight:600;color:var(--txt);margin-bottom:.7rem;line-height:1.22;}
+    .sp{font-size:15px;color:var(--muted);line-height:1.8;max-width:580px;margin-bottom:1.75rem;}
+
+    /* ── FEATURE ROWS ── */
+    .feat{display:grid;grid-template-columns:1fr 1fr;border-radius:14px;overflow:hidden;border:1px solid var(--border);margin-bottom:1.25rem;}
+    .feat.flip .feat-img{order:2;}
+    .feat.flip .feat-body{order:1;}
+    .feat-img img{width:100%;height:280px;object-fit:cover;display:block;background:var(--gl);}
+    .feat-body{padding:2.25rem 2rem;background:#fff;display:flex;flex-direction:column;justify-content:center;}
+    .feat-tag{display:inline-block;background:var(--gl);color:var(--g);border-radius:999px;font-size:10px;font-weight:600;letter-spacing:.08em;padding:3px 12px;margin-bottom:.65rem;text-transform:uppercase;}
+    .feat-h{font-size:19px;font-weight:600;color:var(--txt);margin-bottom:.6rem;line-height:1.3;}
+    .feat-p{font-size:13px;color:var(--muted);line-height:1.75;margin-bottom:1.1rem;}
+    .feat-lnk{font-size:13px;font-weight:500;color:var(--g);display:inline-flex;align-items:center;gap:4px;}
+    .feat-lnk:hover{text-decoration:underline;}
+
+    /* ── MUPPETS ── */
+    .muppet-section{background:var(--off);padding:4rem 2.5rem;border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+    .muppet-inner{max-width:1200px;margin:0 auto;}
+    .muppet-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:2rem;}
+    .muppet-card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;text-align:center;}
+    .muppet-img-wrap{height:190px;overflow:hidden;background:var(--gl);display:flex;align-items:center;justify-content:center;}
+    .muppet-img-wrap img{width:100%;height:100%;object-fit:cover;object-position:top;}
+    .muppet-info{padding:1.1rem 1rem 1.25rem;}
+    .muppet-name{font-size:16px;font-weight:600;color:var(--gd);margin-bottom:3px;}
+    .muppet-role{font-size:10px;color:var(--g);text-transform:uppercase;letter-spacing:.07em;margin-bottom:7px;font-weight:500;}
+    .muppet-desc{font-size:12px;color:var(--muted);line-height:1.65;}
+
+    /* ── PROGRAMME CARDS ── */
+    .card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:2rem;}
+    .card{background:#fff;border:1px solid var(--border);border-radius:14px;overflow:hidden;}
+    .card-ph{height:130px;background:var(--gl);display:flex;align-items:center;justify-content:center;}
+    .card-ph i{font-size:36px;color:var(--g);opacity:.35;}
+    .card-body{padding:1.1rem 1.2rem 1.35rem;}
+    .card-tag{font-size:10px;font-weight:600;color:var(--g);text-transform:uppercase;letter-spacing:.07em;margin-bottom:5px;}
+    .card-h{font-size:14px;font-weight:600;color:var(--txt);line-height:1.35;margin-bottom:6px;}
+    .card-p{font-size:12px;color:var(--muted);line-height:1.65;}
+
+    /* ── SW BAND ── */
+    .sw-band{background:var(--gd);border-radius:14px;padding:2.5rem 2.5rem;display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:center;margin:2.5rem 0;}
+    .sw-band-tag{display:inline-block;background:rgba(255,255,255,.1);color:#90c8a0;border-radius:999px;font-size:10px;letter-spacing:.08em;padding:3px 13px;margin-bottom:.7rem;text-transform:uppercase;}
+    .sw-band-h{font-size:20px;font-weight:600;color:#fff;margin-bottom:.5rem;}
+    .sw-band-p{font-size:13px;color:#80b890;line-height:1.75;}
+    .sw-band-p a{color:var(--y);font-weight:500;}
+    .sw-band-p a:hover{text-decoration:underline;}
+    .sw-btns{display:flex;flex-direction:column;gap:9px;align-items:stretch;min-width:200px;}
+    .sw-btn-y{background:var(--y);color:var(--gd);border:none;border-radius:8px;padding:11px 18px;font-size:13px;font-weight:600;cursor:pointer;font-family:var(--font);display:inline-flex;align-items:center;justify-content:center;gap:5px;white-space:nowrap;}
+    .sw-btn-y:hover{background:#e0b010;}
+    .sw-btn-o{background:transparent;color:#c0e8c8;border:1px solid rgba(255,255,255,.25);border-radius:8px;padding:10px 18px;font-size:13px;font-family:var(--font);text-align:center;white-space:nowrap;}
+    .sw-btn-o:hover{background:rgba(255,255,255,.07);}
+
+    /* ── CONTACT ── */
+    .contact-wrap{background:var(--off);border-top:1px solid var(--border);padding:4rem 2.5rem;}
+    .contact-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;}
+    .cinfo{display:flex;flex-direction:column;gap:1.1rem;}
+    .crow{display:flex;align-items:flex-start;gap:12px;}
+    .ci{font-size:18px;color:var(--g);flex-shrink:0;padding-top:1px;}
+    .ct{font-size:10px;color:var(--muted);text-transform:uppercase;letter-spacing:.07em;margin-bottom:2px;}
+    .cv{font-size:14px;color:var(--txt);}
+    .cv a{color:var(--g);font-weight:500;}
+    .cv a:hover{text-decoration:underline;}
+    .form-wrapper{background:#fff;border:1px solid var(--border);border-radius:14px;padding:2rem;}
+    .form-title{font-size:16px;font-weight:600;color:var(--gd);margin-bottom:4px;}
+    .form-sub{font-size:12px;color:var(--muted);margin-bottom:1.25rem;line-height:1.55;}
+    .success-msg{display:none;background:#e6f5ea;border:1px solid var(--border);border-radius:10px;padding:1.5rem;text-align:center;color:var(--gd);}
+    .success-msg i{font-size:32px;display:block;margin-bottom:8px;color:var(--g);}
+    .success-msg strong{font-size:15px;display:block;margin-bottom:5px;}
+    .success-msg span{font-size:13px;color:var(--muted);}
+    .cform{display:flex;flex-direction:column;gap:10px;}
+    .cform .row2{display:grid;grid-template-columns:1fr 1fr;gap:10px;}
+    .cform input,.cform textarea{width:100%;padding:11px 14px;font-size:13px;border:1.5px solid var(--border);border-radius:9px;background:#fff;color:var(--txt);font-family:var(--font);resize:vertical;}
+    .cform input:focus,.cform textarea:focus{outline:none;border-color:var(--g);box-shadow:0 0 0 3px rgba(26,122,46,.1);}
+    .cform textarea{min-height:95px;}
+    .submit-btn{background:var(--gd);color:#fff;border:none;border-radius:9px;padding:13px 26px;font-size:14px;font-weight:600;cursor:pointer;width:100%;margin-top:4px;font-family:var(--font);transition:background .2s;}
+    .submit-btn:hover{background:var(--g);}
+    .submit-btn:disabled{background:#aaa;cursor:not-allowed;}
+    .form-notice{font-size:11px;color:var(--muted);margin-top:8px;line-height:1.55;padding:10px 13px;background:var(--yp);border-radius:7px;border:0.5px solid #e0d090;}
+    .form-notice a{color:var(--yd);font-weight:500;}
+
+    /* ── NEWS ── */
+    .news-cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:2rem;}
+
+    /* ── FOOTER ── */
+    .footer{background:var(--gd);padding:2.5rem 2.5rem 1.75rem;}
+    .footer-inner{max-width:1200px;margin:0 auto;}
+    .footer-grid{display:grid;grid-template-columns:2.2fr 1fr 1fr;gap:2.5rem;padding-bottom:1.75rem;border-bottom:1px solid rgba(255,255,255,.1);}
+    .fb-name{font-size:15px;font-weight:600;color:#fff;margin-bottom:5px;}
+    .fb-sub{font-size:12px;color:#70a878;line-height:1.65;margin-bottom:12px;}
+    .fb-sw{font-size:11px;color:#508860;}
+    .fb-sw a{color:var(--y);}
+    .fb-sw a:hover{text-decoration:underline;}
+    .fch{font-size:10px;font-weight:600;color:#508860;text-transform:uppercase;letter-spacing:.09em;margin-bottom:10px;}
+    .fcol ul{list-style:none;display:flex;flex-direction:column;gap:7px;}
+    .fcol a{font-size:13px;color:#80a888;}
+    .fcol a:hover{color:#fff;}
+    .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:1.25rem;flex-wrap:wrap;gap:.5rem;}
+    .fc{font-size:11px;color:#406048;}
+    .fext{font-size:12px;color:#70a878;display:flex;align-items:center;gap:4px;}
+    .fext:hover{color:#fff;}
+
+    /* ── RESPONSIVE ── */
+    @media(max-width:900px){
+      .hero-inner{grid-template-columns:1fr;}
+      .hero-img-col{display:none;}
+      .impact-inner{grid-template-columns:repeat(2,1fr);}
+      .feat{grid-template-columns:1fr;}
+      .feat.flip .feat-img{order:0;}
+      .feat.flip .feat-body{order:1;}
+      .muppet-grid{grid-template-columns:repeat(2,1fr);}
+      .card-grid,.news-cards{grid-template-columns:repeat(2,1fr);}
+      .sw-band{grid-template-columns:1fr;}
+      .contact-inner{grid-template-columns:1fr;}
+      .footer-grid{grid-template-columns:1fr;}
+    }
+    @media(max-width:580px){
+      .nav-top{padding:0 1rem;}
+      .nav-links-bar{padding:0 1rem;overflow-x:auto;}
+      .hero-text{padding:2.5rem 1.25rem;}
+      .hero h1{font-size:28px;}
+      .impact-inner{grid-template-columns:repeat(2,1fr);}
+      .section{padding:2.5rem 1.25rem;}
+      .muppet-grid,.card-grid,.news-cards{grid-template-columns:1fr;}
+      .cform .row2{grid-template-columns:1fr;}
+      .footer-bottom{flex-direction:column;align-items:flex-start;}
+    }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+<nav class="nav">
+  <div class="nav-top">
+    <div class="nav-brand">
+      <div class="nav-badge">SS</div>
+      <div>
+        <div class="nav-brand-name">Sesame Square Nigeria Foundation</div>
+        <div class="nav-brand-sub">West Africa's official Sesame Street partner · Est. 2008 · Abuja, Nigeria</div>
+      </div>
+    </div>
+    <div class="nav-right">
+      <a class="nav-sw" href="https://www.sesameworkshop.org" target="_blank" rel="noopener">
+        <i class="ti ti-external-link" aria-hidden="true"></i> sesameworkshop.org
+      </a>
+      <a class="nav-cta" href="#contact">Get involved</a>
+    </div>
+  </div>
+  <div class="nav-links-bar">
+    <a href="#about">About us</a>
+    <a href="#muppets">Meet the Muppets</a>
+    <a href="#work">Our work</a>
+    <a href="#news">News</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- ═══════════════════════════════ HERO ═══════════════════════════════ -->
+<div class="hero">
+  <div class="hero-inner">
+    <div class="hero-text">
+      <div class="hero-pill"><i class="ti ti-leaf" aria-hidden="true"></i> Nigeria · Ghana · Niger · Mali · Senegal</div>
+      <h1>Helping children grow <em>smarter, stronger</em> and kinder</h1>
+      <p class="hero-sub">We're West Africa's nonprofit partner behind Sesame Square — using the power of education, media, and research to support children across the region and empower each generation to build a better world.</p>
+      <div class="hero-btns">
+        <a class="btn-y" href="#work">See our work</a>
+        <a class="btn-ghost" href="#contact">Partner with us</a>
+      </div>
+      <div class="hero-sw-note">
+        <i class="ti ti-star" aria-hidden="true"></i>
+        <span>The official West African arm of <a href="https://www.sesameworkshop.org" target="_blank" rel="noopener">Sesame Workshop, New York</a> — the nonprofit behind Sesame Street, reaching 150M+ children in 190+ countries worldwide.</span>
+      </div>
+    </div>
+    <div class="hero-img-col">
+      <img src="https://speakingbooks.com/wp-content/uploads/2017/08/SB-Sesame-Square-Nigeria-classroom.jpg"
+        alt="Children learning with Sesame Square educational materials in a Nigerian classroom"
+      />
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ IMPACT BAR ═══════════════════════════════ -->
+<div class="impact-bar">
+  <div class="impact-inner">
+    <div class="impact-item"><div class="impact-num">8M+</div><div class="impact-lbl">Children reached in Nigeria</div></div>
+    <div class="impact-item"><div class="impact-num">5</div><div class="impact-lbl">West African countries</div></div>
+    <div class="impact-item"><div class="impact-num">15+</div><div class="impact-lbl">Years of impact</div></div>
+    <div class="impact-item"><div class="impact-num">60K+</div><div class="impact-lbl">Via community outreach</div></div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ MISSION ═══════════════════════════════ -->
+<div class="mission">
+  <p>We're the West African nonprofit partner of <a href="https://www.sesameworkshop.org" target="_blank" rel="noopener">Sesame Workshop</a> — harnessing the power of education, media, and research to empower children in Nigeria and across West Africa to grow smarter, stronger, and kinder.</p>
+</div>
+
+<!-- ═══════════════════════════════ ABOUT ═══════════════════════════════ -->
+<hr class="divider" />
+<section class="section" id="about">
+  <span class="stag">About us</span>
+  <h2 class="sh">More than a TV show — a movement</h2>
+  <p class="sp">Founded in 2008, Sesame Square Nigeria Foundation is a fully incorporated Nigerian entity and the official West African arm of Sesame Workshop. What began as a USAID and PEPFAR project has grown into 15+ years of educational impact across five countries.</p>
+
+  <div class="feat">
+    <div class="feat-img">
+      <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=700&q=80" alt="Nigerian children studying together in a classroom" />
+    </div>
+    <div class="feat-body">
+      <span class="feat-tag">Our story</span>
+      <div class="feat-h">Nigeria's first Sesame Street co-production</div>
+      <p class="feat-p">Sesame Square launched on NTA in 2011 — West Africa's first Sesame Street adaptation. Produced by a multidisciplinary Nigerian team with technical support from Sesame Workshop's New York office, it features beloved Nigerian Muppets Kami, Zobi, and Raya, alongside Big Bird and Elmo revoiced with Nigerian accents.</p>
+      <a class="feat-lnk" href="https://en.wikipedia.org/wiki/Sesame_Square" target="_blank" rel="noopener">Learn more <i class="ti ti-arrow-right" style="font-size:12px" aria-hidden="true"></i></a>
+    </div>
+  </div>
+
+  <div class="feat flip">
+    <div class="feat-img">
+      <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=700&q=80" alt="Teacher training session for West African educators" />
+    </div>
+    <div class="feat-body">
+      <span class="feat-tag">Our reach</span>
+      <div class="feat-h">From Abuja to Accra and beyond</div>
+      <p class="feat-p">Our Nigerian team has developed educational projects for children, families, and educators across Nigeria, Ghana, Niger, Mali, and Senegal. Through literacy kits, teacher trainings, community screenings, and the Hausa adaptation Dandalin Sesame, we reach the most underserved communities in West Africa.</p>
+      <a class="feat-lnk" href="#work">See our programmes <i class="ti ti-arrow-right" style="font-size:12px" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ MUPPETS ═══════════════════════════════ -->
+<div class="muppet-section" id="muppets">
+  <div class="muppet-inner">
+    <span class="stag">Meet the Muppets</span>
+    <h2 class="sh">Sesame Square's beloved characters</h2>
+    <p class="sp" style="margin-bottom:0">Our Nigerian Muppets — created by Sesame Workshop — bring education, warmth, and Nigerian culture to life for millions of children.</p>
+    <div class="muppet-grid">
+      <div class="muppet-card">
+        <div class="muppet-img-wrap">
+          <img src="https://static.wikia.nocookie.net/muppet/images/4/4a/KamiNigeria.jpg" alt="Kami — a yellow furry Muppet from Sesame Square Nigeria" onerror="this.parentNode.style.fontSize='52px';this.parentNode.textContent='🧡'" />
+        </div>
+        <div class="muppet-info">
+          <div class="muppet-name">Kami</div>
+          <div class="muppet-role">Sesame Square · Nigeria</div>
+          <p class="muppet-desc">A warm, curious yellow Muppet who teaches children about acceptance, health, and the joy of learning. Wise, kind, and full of life.</p>
+        </div>
+      </div>
+      <div class="muppet-card">
+        <div class="muppet-img-wrap" style="background:#e8f0ff;">
+          <img src="https://static.wikia.nocookie.net/muppet/images/thumb/9/9a/ZobiSesameSquare.jpg/300px-ZobiSesameSquare.jpg" alt="Zobi — the blue Yam Monster Muppet from Sesame Square Nigeria" onerror="this.parentNode.style.fontSize='52px';this.parentNode.textContent='💙'" />
+        </div>
+        <div class="muppet-info">
+          <div class="muppet-name">Zobi</div>
+          <div class="muppet-role">Yam Monster · Nigeria</div>
+          <p class="muppet-desc">Nigeria's loveable blue Muppet — passionate about yams and just as passionate about learning. Zobi brings humour and heart to every lesson.</p>
+        </div>
+      </div>
+      <div class="muppet-card">
+        <div class="muppet-img-wrap" style="background:#fff0f0;">
+          <img src="https://static.wikia.nocookie.net/muppet/images/thumb/5/5e/Raya_Sesame_Square.jpg/300px-Raya_Sesame_Square.jpg" alt="Raya — a Muppet from Sesame Square Nigeria" onerror="this.parentNode.style.fontSize='52px';this.parentNode.textContent='❤️'" />
+        </div>
+        <div class="muppet-info">
+          <div class="muppet-name">Raya</div>
+          <div class="muppet-role">Sesame Square · Nigeria</div>
+          <p class="muppet-desc">A spirited champion for girls' empowerment. Raya inspires children — especially girls — to dream big, stay in school, and believe in themselves.</p>
+        </div>
+      </div>
+      <div class="muppet-card">
+        <div class="muppet-img-wrap" style="background:#fff8e0;">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e2/Big_Bird_Sesame_Street.jpg/400px-Big_Bird_Sesame_Street.jpg" alt="Big Bird from Sesame Street who appears in Sesame Square Nigeria" onerror="this.parentNode.style.fontSize='52px';this.parentNode.textContent='💛'" />
+        </div>
+        <div class="muppet-info">
+          <div class="muppet-name">Big Bird</div>
+          <div class="muppet-role">Sesame Street · Global</div>
+          <p class="muppet-desc">The iconic six-year-old bird from Sesame Street — revoiced with a Nigerian accent for Sesame Square, bringing warmth and curiosity to Nigerian children.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ OUR WORK ═══════════════════════════════ -->
+<hr class="divider" />
+<section class="section" id="work">
+  <span class="stag">Our work</span>
+  <h2 class="sh">What we do</h2>
+  <p class="sp">From television to teacher training, we deploy research-backed Sesame Workshop programmes adapted specifically for Nigerian and West African children.</p>
+  <div class="card-grid">
+    <div class="card"><div class="card-ph"><i class="ti ti-device-tv" aria-hidden="true"></i></div><div class="card-body"><div class="card-tag">Media</div><div class="card-h">Educational television</div><p class="card-p">Sesame Square airs on NTA, reaching millions of children aged 3–7 with curriculum covering literacy, numeracy, health, and Nigerian cultural pride.</p></div></div>
+    <div class="card"><div class="card-ph"><i class="ti ti-book-2" aria-hidden="true"></i></div><div class="card-body"><div class="card-tag">Literacy</div><div class="card-h">Learning kits & materials</div><p class="card-p">English and Hausa literacy kits — alphabet cards, storybooks, speaking books, and puppet kits — distributed to schools and communities nationwide.</p></div></div>
+    <div class="card"><div class="card-ph"><i class="ti ti-heart-handshake" aria-hidden="true"></i></div><div class="card-body"><div class="card-tag">Health</div><div class="card-h">Health & hygiene education</div><p class="card-p">The WASH UP! and "Cleaner, Healthier, Happier" initiatives — backed by the Bill & Melinda Gates Foundation — promote sanitation in children and caregivers.</p></div></div>
+    <div class="card"><div class="card-ph"><i class="ti ti-chalkboard" aria-hidden="true"></i></div><div class="card-body"><div class="card-tag">Capacity</div><div class="card-h">Teacher training</div><p class="card-p">Working through SUBEB and state boards, we train master educators to deliver child-friendly, inclusive learning environments across Nigeria.</p></div></div>
+    <div class="card"><div class="card-ph"><i class="ti ti-device-mobile" aria-hidden="true"></i></div><div class="card-body"><div class="card-tag">Technology</div><div class="card-h">Mobile learning</div><p class="card-p">Via the Worldreader app, Sesame Square content reaches 30+ mobile stories to families without TV access across Nigeria.</p></div></div>
+    <div class="card"><div class="card-ph"><i class="ti ti-world" aria-hidden="true"></i></div><div class="card-body"><div class="card-tag">Regional</div><div class="card-h">West Africa programmes</div><p class="card-p">Our Nigerian team leads educational projects in Ghana, Niger, Mali, and Senegal — with full technical support from Sesame Workshop New York.</p></div></div>
+  </div>
+
+  <div class="sw-band">
+    <div>
+      <div class="sw-band-tag">Our global partner</div>
+      <div class="sw-band-h">Powered by Sesame Workshop</div>
+      <p class="sw-band-p">Every programme we run is built on <a href="https://www.sesameworkshop.org" target="_blank" rel="noopener">Sesame Workshop's</a> 50+ years of research — the proven framework behind Sesame Street, reaching <strong style="color:#c0e8c8">150 million children in 190+ countries</strong>. Sesame Square is Sesame Workshop's official West African partner.</p>
+    </div>
+    <div class="sw-btns">
+      <a class="sw-btn-y" href="https://www.sesameworkshop.org" target="_blank" rel="noopener"><i class="ti ti-external-link" style="font-size:12px" aria-hidden="true"></i> sesameworkshop.org</a>
+      <a class="sw-btn-o" href="#contact">Work with us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ NEWS ═══════════════════════════════ -->
+<hr class="divider" />
+<section class="section" id="news">
+  <span class="stag">News & milestones</span>
+  <h2 class="sh">Latest from Sesame Square</h2>
+  <div class="news-cards">
+    <div class="card"><div class="card-ph" style="background:#e3f0ff;"><i class="ti ti-tv" aria-hidden="true" style="color:#90b8e0;opacity:1;font-size:36px;"></i></div><div class="card-body"><div class="card-tag" style="color:var(--b)">Broadcast</div><div class="card-h">Dandalin Sesame remains on air across Northern Nigeria</div><p class="card-p">Our Hausa-language adaptation continues on AREWA24, bringing Muppet-powered education to children across six Northern states.</p></div></div>
+    <div class="card"><div class="card-ph" style="background:#fdecea;"><i class="ti ti-heart" aria-hidden="true" style="color:#e0a0a0;opacity:1;font-size:36px;"></i></div><div class="card-body"><div class="card-tag" style="color:var(--r)">Health</div><div class="card-h">"Cleaner, Healthier, Happier" expands to three countries</div><p class="card-p">Our Gates Foundation-backed WASH initiative now runs in Nigeria, Bangladesh, and India — improving sanitation for millions of children.</p></div></div>
+    <div class="card"><div class="card-ph" style="background:#fffbe8;"><i class="ti ti-book" aria-hidden="true" style="color:#c0a040;opacity:1;font-size:36px;"></i></div><div class="card-body"><div class="card-tag" style="color:var(--yd)">Literacy</div><div class="card-h">80,000 children reached with literacy outreach kits</div><p class="card-p">English and Hausa literacy kits distributed to over 80,000 children and 2,700 caregivers across 11 Nigerian states.</p></div></div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════ CONTACT ═══════════════════════════════ -->
+<div class="contact-wrap" id="contact">
+  <div class="contact-inner">
+    <div>
+      <span class="stag">Get in touch</span>
+      <h2 class="sh" style="margin-bottom:.5rem">We'd love to hear from you</h2>
+      <p class="sp">Whether you're a partner, donor, educator, or parent — reach out and let's talk about working together.</p>
+      <div class="cinfo">
+        <div class="crow"><i class="ti ti-map-pin ci" aria-hidden="true"></i><div><div class="ct">Address</div><div class="cv">Abuja, Federal Capital Territory, Nigeria</div></div></div>
+        <div class="crow"><i class="ti ti-phone ci" aria-hidden="true"></i><div><div class="ct">Phone / WhatsApp</div><div class="cv"><a href="tel:+2347048298939">+234 704 829 8939</a></div></div></div>
+        <div class="crow"><i class="ti ti-mail ci" aria-hidden="true"></i><div><div class="ct">Email</div><div class="cv"><a href="mailto:sesamesquarenigeriafoundation@gmail.com">sesamesquarenigeriafoundation@gmail.com</a></div></div></div>
+        <div class="crow"><i class="ti ti-world ci" aria-hidden="true"></i><div><div class="ct">Website</div><div class="cv"><a href="https://www.sesamesquarenigeriafoundation.org" target="_blank" rel="noopener">sesamesquarenigeriafoundation.org</a></div></div></div>
+        <div class="crow"><i class="ti ti-link ci" aria-hidden="true"></i><div><div class="ct">Global partner</div><div class="cv"><a href="https://www.sesameworkshop.org" target="_blank" rel="noopener">Sesame Workshop, New York, USA</a></div></div></div>
+        <div class="crow"><i class="ti ti-building ci" aria-hidden="true"></i><div><div class="ct">Coverage</div><div class="cv">Nigeria · Ghana · Niger · Mali · Senegal</div></div></div>
+      </div>
+    </div>
+    <div>
+      <div class="form-wrapper">
+        <div class="form-title">Send us a message</div>
+        <div class="form-sub">Fill in the form and your message will be delivered directly to <strong>sesamesquarenigeriafoundation@gmail.com</strong></div>
+
+        <div class="success-msg" id="successMsg">
+          <i class="ti ti-circle-check" aria-hidden="true"></i>
+          <strong>Message sent successfully!</strong>
+          <span>Thank you for reaching out. We'll get back to you shortly.</span>
+        </div>
+
+        <!-- ✏️ TO ACTIVATE: Replace YOUR_FORM_ID below with your Formspree ID -->
+        <form class="cform" id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <input type="hidden" name="_subject" value="New message from Sesame Square Nigeria website" />
+          <div class="row2">
+            <input type="text" name="full_name" placeholder="Full name *" required />
+            <input type="email" name="email" placeholder="Email address *" required />
+          </div>
+          <input type="tel" name="phone" placeholder="Phone number (optional)" />
+          <input type="text" name="organisation" placeholder="Organisation (optional)" />
+          <input type="text" name="subject" placeholder="Subject *" required />
+          <textarea name="message" placeholder="Your message *" required></textarea>
+          <button class="submit-btn" type="submit" id="submitBtn">Send message</button>
+          <p class="form-notice">
+            ⚡ <strong>To activate live email delivery:</strong> sign up free at <a href="https://formspree.io" target="_blank" rel="noopener">formspree.io</a>, create a form targeting your Gmail, copy the Form ID (e.g. <em>xkgwabcd</em>), and replace <em>YOUR_FORM_ID</em> in this file's HTML — or send it to us and we'll do it for you.
+          </p>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ═══════════════════════════════ FOOTER ═══════════════════════════════ -->
+<footer class="footer">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div>
+        <div class="fb-name">Sesame Square Nigeria Foundation</div>
+        <p class="fb-sub">West Africa's official Sesame Street partner since 2008 — using education, media, and research to help children grow smarter, stronger, and kinder across Nigeria and the region.</p>
+        <div class="fb-sw">A partner of <a href="https://www.sesameworkshop.org" target="_blank" rel="noopener">Sesame Workshop, New York</a> — the nonprofit behind Sesame Street in 190+ countries.</div>
+      </div>
+      <div class="fcol">
+        <div class="fch">Navigate</div>
+        <ul>
+          <li><a href="#about">About us</a></li>
+          <li><a href="#muppets">Meet the Muppets</a></li>
+          <li><a href="#work">Our work</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="fcol">
+        <div class="fch">Links</div>
+        <ul>
+          <li><a href="https://www.sesamesquarenigeriafoundation.org" target="_blank" rel="noopener">Our full website</a></li>
+          <li><a href="https://www.sesameworkshop.org" target="_blank" rel="noopener">Sesame Workshop</a></li>
+          <li><a href="https://www.sesameworkshop.org/support-us/donate" target="_blank" rel="noopener">Donate to Sesame</a></li>
+          <li><a href="https://en.wikipedia.org/wiki/Sesame_Square" target="_blank" rel="noopener">Sesame Square on Wikipedia</a></li>
+          <li><a href="https://muppet.fandom.com/wiki/Sesame_Square" target="_blank" rel="noopener">Muppet Wiki</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="fc">© 2025 Sesame Square Nigeria Foundation · Abuja, Nigeria · sesamesquarenigeriafoundation@gmail.com · +234 704 829 8939</span>
+      <a class="fext" href="https://www.sesamesquarenigeriafoundation.org" target="_blank" rel="noopener">Full website <i class="ti ti-external-link" style="font-size:11px" aria-hidden="true"></i></a>
+    </div>
+  </div>
+</footer>
+
+<script>
+document.getElementById('contactForm').addEventListener('submit', async function(e) {
+  e.preventDefault();
+  const btn = document.getElementById('submitBtn');
+  const form = this;
+  const successMsg = document.getElementById('successMsg');
+
+  if (form.action.includes('YOUR_FORM_ID')) {
+    alert('Form not yet activated.\n\nTo activate:\n1. Go to formspree.io and sign up free\n2. Create a form targeting sesamesquarenigeriafoundation@gmail.com\n3. Replace YOUR_FORM_ID in this HTML file with your Formspree ID\n\nOr email us directly at sesamesquarenigeriafoundation@gmail.com');
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = 'Sending…';
+
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+    if (res.ok) {
+      form.style.display = 'none';
+      successMsg.style.display = 'block';
+    } else {
+      throw new Error('Server error');
+    }
+  } catch (err) {
+    btn.disabled = false;
+    btn.textContent = 'Send message';
+    alert('Something went wrong. Please email us directly at sesamesquarenigeriafoundation@gmail.com or call +234 704 829 8939');
+  }
+});
+</script>
+
+</body>
+</html>
